@@ -11,26 +11,49 @@
 /* Begynd her... */
 
 /*Layout*/
-.grid-1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
-  padding: 12rem;
-}
+@media (min-width: 300px) {
+  .grid-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+    padding: 12rem;
+  }
+  .tekst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
 
-.tekst {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
+  .img {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+  }
 }
+@media (max-width: 300px) {
+  .grid-1-1 {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+  }
 
-.img {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-content: center;
+  .tekst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .img {
+    display: grid;
+    gap: 10px;
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
+    justify-content: center;
+  }
 }
 /*Layout*/
 
