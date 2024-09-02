@@ -12,7 +12,12 @@ ul {
 
   @container (width > 700px) {
     grid-template-columns: 1fr 1fr;
+
+    & > *:first-child {
+      grid-column: span 2;
+    }
   }
+
   /* Tilføj container regel, når width > 700px */
   /* - Indstil 2 kolonner */
   /* - Sæt det første barn til `grid-column: span 2` */
@@ -40,6 +45,13 @@ article {
     margin-top: 0.4lh;
   }
 
+  @container (width > 500px) {
+    grid-template-columns: 1fr 1fr;
+
+    :nth-child(even) > & img {
+      order: 1;
+    }
+  }
   /* Tilføj container regel når width > 500px */
   /* - Indstil 2 kolonner */
   /* - Sæt `order: 1;` på img på hvert andet card */
