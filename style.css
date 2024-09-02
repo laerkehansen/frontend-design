@@ -39,7 +39,7 @@ section {
     align-self: stretch;
     object-fit: cover;
     aspect-ratio: 1.35;
-    grid-area: 1/1/-1;
+    grid-area: 1/1/-1/2;
   }
 
   figcaption {
